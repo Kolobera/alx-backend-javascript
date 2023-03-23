@@ -1,20 +1,5 @@
-import HolbertonCourse from "./2-hbtn_course.js";
+import Airport from "./7-airport.js";
 
-const c1 = new HolbertonCourse("ES6", 1, ["Bob", "Jane"])
-console.log(c1.name);
-c1.name = "Python 101";
-console.log(c1);
-
-try {
-    c1.name = 12;
-} 
-catch(err) {
-    console.log(err);
-}
-
-try {
-    const c2 = new HolbertonCourse("ES6", "1", ["Bob", "Jane"]);
-}
-catch(err) {
-    console.log(err);
-}
+const airportSF = new Airport('San Francisco Airport', 'SFO');
+console.log(airportSF);
+console.log(airportSF.toString());
