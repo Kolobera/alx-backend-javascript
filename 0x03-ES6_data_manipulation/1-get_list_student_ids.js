@@ -1,3 +1,2 @@
-export default function getListStudentIds(getListStudents) {
-  return getListStudents.map((student) => student.id);
-}
+/*eslint-disable */
+export default arr => Array.isArray(arr) && arr.map(item => item.id) || [];
