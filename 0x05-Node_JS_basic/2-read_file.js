@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-export default function countStudents(pathFile) {
+function countStudents(pathFile) {
   const csList = [];
   const sweList = [];
   try {
@@ -22,3 +22,5 @@ export default function countStudents(pathFile) {
     throw new Error('Cannot load the database');
   }
 }
+
+module.exports = countStudents;
