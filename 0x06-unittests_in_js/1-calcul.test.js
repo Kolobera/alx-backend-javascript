@@ -42,35 +42,35 @@ describe('calculateNumber', () => {
   
   describe('type == "SUBTRACT"', () => {
     it('floating point whole numbers', () => {
-      assert.strictEqual(calculateNumber("SUBTRACT",2.0, 3.0), 1);
+      assert.strictEqual(calculateNumber("SUBTRACT",2.0, 3.0), -1);
     });
   
     it('rounding down b', () => {
-      assert.strictEqual(calculateNumber("SUBTRACT",-1.0, -3.3), -2);
+      assert.strictEqual(calculateNumber("SUBTRACT",-1.0, -3.3), 2);
     });
   
     it('rounding down a and b', () => {
-      assert.strictEqual(calculateNumber("SUBTRACT",1.2, 2.4), 1);
+      assert.strictEqual(calculateNumber("SUBTRACT",1.2, 2.4), -1);
     });
   
     it('rounding down a', () => {
-      assert.strictEqual(calculateNumber("SUBTRACT",-4.4, 2.0), 6);
+      assert.strictEqual(calculateNumber("SUBTRACT",-4.4, 2.0), -6);
     });
   
     it('rounding up b', () => {
-      assert.strictEqual(calculateNumber("SUBTRACT",1.0, 2.5), 2);
+      assert.strictEqual(calculateNumber("SUBTRACT",1.0, 2.5), -2);
     });
   
     it('rounding up a and b', () => {
-      assert.strictEqual(calculateNumber("SUBTRACT",-2.7, -2.5), 1);
+      assert.strictEqual(calculateNumber("SUBTRACT",-2.7, -2.5), -1);
     });
   
     it('rounding up a', () => {
-      assert.strictEqual(calculateNumber("SUBTRACT",3.7, 2.0), -2);
+      assert.strictEqual(calculateNumber("SUBTRACT",3.7, 2.0), 2);
     });
   
     it('rounding down a and b floating point fractional numbers with trailing 9\'s', () => {
-      assert.strictEqual(calculateNumber("SUBTRACT",2.49999, 3.49999), 1);
+      assert.strictEqual(calculateNumber("SUBTRACT",2.49999, 3.49999), -1);
     });
 
     it('0 and 0', () => {

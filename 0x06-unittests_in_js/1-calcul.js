@@ -3,7 +3,7 @@ const calculateNumber = (type, a, b) => {
     return Math.round(a) + Math.round(b);
   }
   else if (type === "SUBTRACT") {
-    return Math.round(b) - Math.round(a);
+    return Math.round(a) - Math.round(b);
   }
   else {
     return Math.round(b) === 0 ? "Error" : Math.round(a) / Math.round(b);
